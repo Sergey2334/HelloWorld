@@ -1,3 +1,5 @@
+package Lesson3;
+
 import java.util.Random;
 
 public class Lesson3Exercise9 {

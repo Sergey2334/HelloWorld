@@ -1,4 +1,5 @@
-import java.sql.Array;
+package Lesson3;
+
 import java.util.Scanner;
 
 public class Lesson3Exercise3 {
