@@ -7,6 +7,7 @@ public class Exercise9 {
         /*
         idea:
         ___n/2-1___n/2___n/2+1___
+           leftNum   +   rightNum = N
 
         Doesn't Work With Negative Numbers and Doesn't Work When N = 0 or 1 :'(
         */
