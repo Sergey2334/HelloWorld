@@ -15,7 +15,7 @@ public class Exercise8 {
         String wrong2   = " 0501234567";
         String wrong3   = "0501234567 ";
         String wrong4   = "05-01234567";
-        String wrong5   = "9731234567";
+        String wrong5   = "972401234567";
         String wrong6   = "9721234567";
         String wrong7   = "97250-1234567";
         String wrong8   = "050-12345678";
@@ -51,7 +51,7 @@ public class Exercise8 {
             format = 2;
             //System.out.println("Format 2");
         }
-        else if (inputtedPhoneNumber.length() == 12 && inputtedPhoneNumber.substring(0, 3).compareTo("972") == 0) // 972501234567 , 12 Chars , format 3
+        else if (inputtedPhoneNumber.length() == 12 && inputtedPhoneNumber.substring(0, 4).compareTo("9725") == 0) // 972501234567 , 12 Chars , format 3
         {
             format = 3;
             //System.out.println("Format 3");

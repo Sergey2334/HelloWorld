@@ -10,7 +10,6 @@ public class Exercise11 {
         System.out.println(reverseArray(str1));
         System.out.println(reverseArray(str2));
         System.out.println(reverseArray(str3));
-
     }
 
     public static String reverseArray(String str)

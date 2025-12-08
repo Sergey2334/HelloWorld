@@ -20,7 +20,7 @@ public class Exercise12 {
         for(int i = 0; i < passwordsArray.length; i++)
         {
             System.out.print(passwordsArray[i]);
-            System.out.print("\t=>\t");
+            System.out.print("\t\t=>\t");
             System.out.println(checkPasswordIntegrity(passwordsArray[i]));
         }
 
@@ -33,16 +33,12 @@ public class Exercise12 {
         final int MAX_LENGTH = 10;
         if (inputtedPassword.length() < MIN_LENGTH || inputtedPassword.length() > MAX_LENGTH)
         {
-            System.out.print(" Length Check Flag ");
+            //System.out.print(" Length Check Flag ");
             return false;
         }
 
         // Initialize Digits Array
-        int[] digitsArray = new int[10];
-        for (int i = 0 ; i < digitsArray.length; i++)
-        {
-            digitsArray[i] = i;
-        }
+        char[] digitsArray = {'0' , '1', '2', '3', '4', '5', '6', '7', '8', '9'};
 
         // Digit Check
         boolean digitsPositiveFlag = false;
@@ -63,7 +59,7 @@ public class Exercise12 {
         }
         if (!digitsPositiveFlag)
         {
-            System.out.print(" Digits Check Flag ");
+            //System.out.print(" Digits Check Flag ");
             return false;
         }
 
@@ -89,7 +85,7 @@ public class Exercise12 {
         }
         if (!symbolPositiveFlag)
         {
-            System.out.print(" Symbols Check Flag ");
+            //System.out.print(" Symbols Check Flag ");
             return false;
         }
 
