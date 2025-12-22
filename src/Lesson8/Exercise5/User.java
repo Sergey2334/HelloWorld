@@ -127,23 +127,46 @@ public class User {
 
         for (int i = 0; i < this.following.length; i++)
         {
-            //System.out.println(i);
             if (isFakeAccount(this.following[i]))
             {
-                //System.out.printf("%s Account Removed\n", this.followers[i]);
-                //this.following[i] = null;
+                this.following[i] = null;
             }
         }
 
         for (int i = 0; i < this.followers.length; i++)
         {
-            //System.out.println(i);
             if (isFakeAccount(this.followers[i]))
             {
-                //System.out.printf("%s Account Removed\n", this.followers[i]);
-                //this.followers[i] = null;
+                this.followers[i] = null;
             }
         }
-        // For now its null , but then we can Remove the nulls from the Array
+
+        this.following = removeNullUsers(this.following);
+        this.followers =removeNullUsers(this.followers);
+    }
+
+    private User[] removeNullUsers(User[] usersArray) // O(n)
+    {
+        int nullUserCount = 0;
+        for (int i = 0; i < usersArray.length; i++)
+        {
+            if (usersArray[i] == null)
+            {
+                nullUserCount++;
+            }
+        }
+
+        User[] newUserArray = new User[usersArray.length - nullUserCount];
+
+        for (int i = 0, newUserArrayIndex = 0; i < newUserArray.length; i++)
+        {
+            if (usersArray[i] != null)
+            {
+                newUserArray[newUserArrayIndex] = usersArray[i];
+                newUserArrayIndex++;
+            }
+        }
+
+        return newUserArray;
     }
 }
