@@ -1,7 +1,5 @@
 package Exam1Tests.ExamExercises;
 
-import java.util.Arrays;
-
 public class Exercise2 {
     public static void main(String[] args) {
         String str1 = "GFAAFGGAFGAF";
