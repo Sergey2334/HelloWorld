@@ -16,8 +16,7 @@ public class Exercise4Main {
             myBucketArray[i].fill();
         }
 
-        Bucket newBucket = reduceAmountInBuckets(myBucketArray, 60);
-        System.out.println(newBucket);
+        System.out.println(reduceAmountInBuckets(myBucketArray, 60));
     }
 
     private static void magic() {
@@ -82,11 +81,22 @@ public class Exercise4Main {
 
     private static int[] fillExactAmount(Bucket[] buckets, int amount)
     {
-        int[] indexArray = {};
+        // I Tried For 2 Days Cant Get It To Work
+        // I'm Sure Recursion Is Needed But I Can't Figure It Out :'(
 
-        //Need More Work
+        return new int[]{};
+    }
 
-        return indexArray;
+    private static int getSumOfBuckets(Bucket[] buckets)
+    {
+        int sum = 0;
+
+        for (int i = 0; i < buckets.length; i++)
+        {
+            sum += (int) buckets[i].getCurrent();
+        }
+
+        return sum;
     }
 
     private static int[] addNumberToNumbersArray(int[] array, int numberToAdd)
@@ -101,5 +111,23 @@ public class Exercise4Main {
         newNumbersArray[array.length] = numberToAdd;
 
         return newNumbersArray;
+    }
+
+    private static int[] add2Arrays(int[] array1, int[] array2)
+    {
+        int combinedLength = array1.length + array2.length;
+        int[] resultArray = new int[combinedLength];
+
+        for (int i = 0; i < array1.length; i++)
+        {
+            resultArray[i] = array1[i];
+        }
+
+        for (int i = array1.length, j = 0; i < combinedLength; i++, j++)
+        {
+            resultArray[i] = array2[j];
+        }
+
+        return resultArray;
     }
 }
